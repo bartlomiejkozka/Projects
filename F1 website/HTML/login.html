@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+    <title>Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+
+</head>
+<body>
+
+    <h1>Come on, let's sign in Brother!</h1>
+    <form id="loginForm">
+        <fieldset>
+            <legend>Sign in</legend>
+            <label for="nick">Nick:</label><br>
+            <input type="text" id="nick" name="login" maxlength="10" minlength="3"
+            pattern="^[a-z0-9]+$" placeholder="nick123" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="login" maxlength="15" minlength="3"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]+$" placeholder="Haslo987@" required><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+</body>
+</html>

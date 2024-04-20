@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mercedes Pictures</title> 
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="/images/f_logo_icon_248908.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/login.js" defer></script>
+    <style>
+      body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+body::before {
+  content: '';
+  position: fixed; /* Fixed zamiast absolute pozwala na pokrycie całego viewportu nawet przy scrollowaniu */
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: -1;
+  background-image: url('images/BAKU-3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px); /* Dodaje rozmycie do tła */
+}
+
+    </style>
+</head>
+<body>
+
+    <header>       
+        <nav>
+                                        <!--MENU-->
+            <ul class="menu">
+                <li><a id="home-ico" href="main.html"><img id="home-img" src="images/2418779.png" alt="f1Icon"></a></li>
+                <li><a href="drivers.html">Kierowcy</a></li>
+                <li><a href="Kalendarz.html">Kalendarz</a></li>
+                <li><a href="Tory.html">Tory</a></li>
+                
+
+                <li><a href="mercedes.html">Zdjęcia</a>
+                    <ul class="firstSublist">
+                        <li><a href="mercedes.html">Mercedes</a></li>
+                        <li><a href="ferrari.html">Ferrari</a></li>
+                        <li><a href="red_bull.html">Red bull</a></li>
+                    </ul>
+                </li>
+                <li><a href="Sala.html">Sala Chwały</a></li>
+                <li><a href="media.html">Media i linki</a></li>
+                <li><a href="o_nas.html">O nas</a></li>
+                <li><div id="sign-in"><a id="login" href="#" onclick="OnClick()">Sign in</a></div></li>
+            </ul>    
+            
+            <p id="login_text"></p>
+
+        </nav>
+        </header>
+
+
+<!-- Header -->
+<div class="header" id="myHeader">
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">4</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="images/red_bull/1213896.jpg" style="width:100%">
+    <img src="images/red_bull/2023-Australia-kwalifikacje-Verstappen-Red-Bull-Albert-Park.jpg" style="width:100%">
+    <img src="images/red_bull/2023-Red-Bull-Racing-RB19-Miami-GP-5.jpg" style="width:100%">
+    <img src="images/red_bull/231126111827-max-verstappen-abu-dhabi-grand-prix-11-26-2023.jpg" style="width:100%">
+    <img src="images/red_bull/519c6662340bd0a87a9d4d597a032a7c.jpg" style="width:100%">
+    <img src="images/red_bull/c.webp" style="width:100%">
+    <img src="images/red_bull/FZZAdKAX0AAUhMo.jpeg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/red_bull/GettyImages-1468784192.jpg.avif" style="width:100%">
+    <img src="images/red_bull/red-bull-racing-perez-verstappen-japonia-f1-2023.avif" style="width:100%">
+    <img src="images/red_bull/max-verstappen-bottas.avif" style="width:100%">
+    <img src="images/red_bull/max-verstappen-lance-stroll.avif" style="width:100%">
+    <img src="images/red_bull/max-verstappen-out-lap.avif" style="width:100%">
+    <img src="images/red_bull/max-verstappen-podium.avif" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="images/red_bull/max-verstappen-singapore-grand-prix-2023.avif" style="width:100%">
+    <img src="images/red_bull/max-verstappen-vettel.avif" style="width:100%">
+    <img src="images/red_bull/Red-Bull-logoless-car.jpeg" style="width:100%">
+    <img src="images/red_bull/red-bull-racing-rb18-1.jpg" style="width:100%">
+    <img src="images/red_bull/red_bull_rb18_2022_formula_1_4k-HD.jpg" style="width:100%">
+    <img src="images/red_bull/skysports-f1-red-bull-miami_6149284.jpg" style="width:100%">
+    <img src="images/red_bull/TELEMMGLPICT000326617490_trans_NvBQzQNjv4BqLEIedZkgYRDCQvXvdkKFQCaM8vGkvcKjM2spEfrUuts.jpeg.webp" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/red_bull/verstappen-abu-dhabi.jpg.avif" style="width:100%">
+    <img src="images/red_bull/wp9824908.jpg" style="width:100%">
+    <img src="images/red_bull/XPB_1184740_HiRes_2022-12-15-122400_tgug.jpg" style="width:100%">
+    <img src="images/red_bull/SI202310190050-scaled.jpg" style="width:100%">
+    <img src="images/red_bull/austriangp3.jpg" style="width:100%">
+    <img src="images/red_bull/View-7_7d7ad7b6-22fc-4604-8002-dc6c6a930430.jpg.webp" style="width:100%">
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<footer>
+  <div class="fot1">
+      <a href="Kontakt.html">Kontakt</a>
+      <a href="Polityka.html">Polityka Prywatności</a>
+      <a href="Dotacje.html">Dotacje</a>
+      <a href="Zasady.html">Zasady i regulacje</a>
+      <a href="Info.html">Informacje prawne</a>
+  </div>
+  <p>&copy Unoffcial Formula One Website</p>
+</footer>
+
+</body>
+</html>

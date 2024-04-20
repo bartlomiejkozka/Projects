@@ -1,0 +1,81 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Sala Chwały</title>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="/images/f_logo_icon_248908.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="css/footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/login.js"></script>
+    </head>
+    <body>
+        <header>       
+            <nav>
+                                            <!--MENU-->
+                <ul class="menu">
+                    <li><a id="home-ico" href="main.html"><img id="home-img" src="images/2418779.png" alt="f1Icon"></a></li>
+                    <li><a href="drivers.html">Kierowcy</a></li>
+                    <li><a href="Kalendarz.html">Kalendarz</a></li>
+                    <li><a href="Tory.html">Tory</a></li>
+                    
+    
+                    <li><a href="mercedes.html">Zdjęcia</a>
+                        <ul class="firstSublist">
+                            <li><a href="mercedes.html">Mercedes</a></li>
+                            <li><a href="ferrari.html">Ferrari</a></li>
+                            <li><a href="red_bull.html">Red bull</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Sala.html">Sala Chwały</a></li>
+                    <li><a href="media.html">Media i linki</a></li>
+                    <li><a href="o_nas.html">O nas</a></li>
+                    <li><div id="sign-in"><a id="login" href="#" onclick="OnClick()">Sign in</a></div></li>
+                </ul>    
+                
+                <p id="login_text"></p>
+    
+            </nav>
+        </header>
+        <div id="salabox">
+            <img src="images/Foto/strzałkal.png" class="left" onclick="previousImage()">
+            <img src="images/Foto/image1.jpg" class="image" id="image">
+            <img src="images/Foto/strzałkap.png" class="right" onclick="nextImage()">
+        </div>
+
+        <script>
+            var images = [
+                "images/Foto/image1.jpg",
+                "images/Foto/image2.jpg",
+                "images/Foto/image3.jpg",
+                "images/Foto/image4.jpg",
+                "images/Foto/image5.jpg",
+                "images/Foto/image6.jpg"
+            ];
+
+            var currentIndex = 0;
+            var imageElement = document.getElementById("image");
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                imageElement.src = images[currentIndex];
+            }
+
+            function previousImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                imageElement.src = images[currentIndex];
+            }
+        </script>
+        
+        <footer>
+            <div class="fot1">
+                <a href="Kontakt.html">Kontakt</a>
+                <a href="Polityka.html">Polityka Prywatności</a>
+                <a href="Dotacje.html">Dotacje</a>
+                <a href="Zasady.html">Zasady i regulacje</a>
+                <a href="Info.html">Informacje prawne</a>
+            </div>
+            <p>&copy Unoffcial Formula One Website</p>
+        </footer>
+    </body>
+</html>

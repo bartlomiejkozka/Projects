@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>O nas</title>
+        <link rel="icon" type="image/x-icon" href="/images/f_logo_icon_248908.ico">
+        <link rel="stylesheet" href="css/menu.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+        <link rel="stylesheet" href="css/menu.css">
+        <script src="js/login.js" defer></script>
+        <style>
+            body::before {
+                content: '';
+                position: fixed; /* Fixed zamiast absolute pozwala na pokrycie całego viewportu nawet przy scrollowaniu */
+                top: -20px;
+                left: -20px;
+                right: -20px;
+                bottom: -20px;
+                z-index: -1;
+                background-image: url('images/BAKU-3.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                filter: blur(10px); /* Dodaje rozmycie do tła */
+            }
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+            }
+            .box p {
+                font-family: "Sofia", sans-serif;
+            }
+            .per1 {
+                width: 25%;
+                height: 25%;
+                text-align: center;    
+            }
+            #sz {
+                width: 80%;
+                height: 80%;
+            }
+            .per2 { 
+                text-align: center;
+                width: 25%;
+                height: 25%;
+                margin-left: 100px;
+            }
+            #ba {
+                width: 80%;
+                height: 80%;
+            }
+            #content {
+                display: flex;
+                justify-content: center;
+                margin: 100px;
+                border-radius: 10px;
+                padding: 30px;
+            }
+            #showed {
+                font-size: 20px;
+                text-align: center;
+                line-height: 30px;
+                color: #fff;
+                font-weight: bold;
+            }
+            #sz {
+                box-shadow: 0px 1px 3px 0px #9c9c9c, 0px 0px 18px 0px #9c9c9c;
+                border-radius: 10px;
+            }
+            #ba {
+                box-shadow: 0px 1px 3px 0px #9c9c9c, 0px 0px 18px 0px #9c9c9c;
+                border-radius: 10px;
+            }
+            button {
+                margin: 10px;
+                border-radius: 10px;
+                border: none;
+                padding: 15px;
+                background-color: rgba(235, 235, 235, 0.15);
+                color: #fff;
+                font-weight: bold;
+            }
+            button:hover {
+                background-color: #fa872f;
+                color: black;
+            }
+            h2 {
+                font-size: 25px;
+                font-family: "Sofia", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <header>       
+            <nav>
+                                            <!--MENU-->
+                <ul class="menu">
+                    <li><a id="home-ico" href="main.html"><img id="home-img" src="images/2418779.png" alt="f1Icon"></a></li>
+                    <li><a href="drivers.html">Kierowcy</a></li>
+                    <li><a href="Kalendarz.html">Kalendarz</a></li>
+                    <li><a href="Tory.html">Tory</a></li>
+                    
+    
+                    <li><a href="mercedes.html">Zdjęcia</a>
+                        <ul class="firstSublist">
+                            <li><a href="mercedes.html">Mercedes</a></li>
+                            <li><a href="ferrari.html">Ferrari</a></li>
+                            <li><a href="red_bull.html">Red bull</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Sala.html">Sala Chwały</a></li>
+                    <li><a href="media.html">Media i linki</a></li>
+                    <li><a href="o_nas.html">O nas</a></li>
+                    <li><div id="sign-in"><a id="login" href="#" onclick="OnClick()">Sign in</a></div></li>
+                </ul>    
+                
+                <p id="login_text"></p>
+    
+            </nav>
+          </header>
+
+        <div class="box">
+            <div class="per1">
+                <h2 class="font-effect-fire">Szymon Piega</h2>
+                <img id="sz" src="images/szymon.jpg">
+                <p class="font-effect-fire">Wiek: 20 lat<br>Status społeczny: Student<br></p>
+                <button type="button" id="show">kliknij aby dowiedzieź się więcej</button>
+            </div>
+            <div class="per2">
+                <h2 class="font-effect-fire">Bartłomiej Kózka</h2>
+                <img id="ba" src="images/bartloemiej.jpg">
+                <p class="font-effect-fire">Wiek: 20 lat<br>Status społeczny: Student<br></p>
+                <button type="button" id="show1">kliknij aby dowiedzieź się więcej</button>
+            </div>
+        </div>
+        <div id="content">
+            <p id="showed"></p>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                $('#show').click(function(){
+                    if( $('#showed').text() == "" ){
+                        $('html, body').animate({
+                            scrollTop: $("#showed").offset().top
+                        }, 'slow');
+                        $("#content").css("box-shadow", "0px 1px 3px 0px #fa872f, 0px 0px 18px 0px #fa872f");
+                        $("#content").css("background-color", "rgba(235, 235, 235, 0.3)");
+                        $("#showed").text("Hejka! Jestem Szymon, drugoroczniak na AGH, gdzie wraz z moim przyjacielem Bartłomiejem zgłębiamy tajniki Inżynierii i Analizy Danych. Naszym wspólnym projektem jest strona internetowa o Formule 1, która pochłania większość naszego \"geekowskiego\" entuzjazmu. Kiedy nie koduję ani nie analizuję wykresów prędkości na torze, moje hobby to muzyka elektroniczna i DJ'ing. Uwielbiam tworzyć playlisty, które pomagają mi się skupić podczas długich sesji programistycznych. Czasem organizuję małe imprezy dla przyjaciół, gdzie mogę podzielić się moją pasją do muzyki. Poza tym, uwielbiam rowerowe wycieczki po malowniczych zakątkach Krakowa, które są dla mnie idealnym sposobem na odstresowanie po intensywnym tygodniu na uniwersytecie.");
+                    }
+                    else{
+                        if( $('#showed').text() == "Cześć, nazywam się Bartłomiej i jestem studentem drugiego roku Inżynierii i Analizy Danych na Akademii Górniczo-Hutniczej w Krakowie. Moja pasja do cyfr i analizy skomplikowanych zbiorów danych idealnie komponuje się z moim zainteresowaniem Formułą 1, gdzie każdy szczegół ma znaczenie. Wolne chwile lubię spędzać, śledząc wyścigi i analizując strategie zespołów. Razem z moim kolegą Szymonem rozwijamy stronę internetową poświęconą tej królowej motorsportu, gdzie dzielimy się naszymi spostrzeżeniami i analizami. Kiedy nie śledzę F1 lub nie zanurzam się w danych, relaksuję się grając w szachy lub eksplorując świat fotografii ulicznej, co pozwala mi spojrzeć na świat z innej perspektywy." ){
+                            $('html, body').animate({
+                                scrollTop: $("#showed").offset().top
+                            }, 'slow');
+                            $("#content").css("background-color", "rgba(235, 235, 235, 0.3)");
+                            $("#content").css("box-shadow", "0px 1px 3px 0px #fa872f, 0px 0px 18px 0px #fa872f")
+                            $("#showed").text("Hejka! Jestem Szymon, drugoroczniak na AGH, gdzie wraz z moim przyjacielem Bartłomiejem zgłębiamy tajniki Inżynierii i Analizy Danych. Naszym wspólnym projektem jest strona internetowa o Formule 1, która pochłania większość naszego \"geekowskiego\" entuzjazmu. Kiedy nie koduję ani nie analizuję wykresów prędkości na torze, moje hobby to muzyka elektroniczna i DJ'ing. Uwielbiam tworzyć playlisty, które pomagają mi się skupić podczas długich sesji programistycznych. Czasem organizuję małe imprezy dla przyjaciół, gdzie mogę podzielić się moją pasją do muzyki. Poza tym, uwielbiam rowerowe wycieczki po malowniczych zakątkach Krakowa, które są dla mnie idealnym sposobem na odstresowanie po intensywnym tygodniu na uniwersytecie.");
+                        }
+                        else{
+                            $("#content").css("background-color", "transparent");
+                            $("#content").css("box-shadow", "none");
+                            $("#showed").text("");
+                        }
+                    }
+                });
+                $('#show1').click(function(){
+                    if( $('#showed').text() == "" ){
+                        $('html, body').animate({
+                            scrollTop: $("#showed").offset().top
+                        }, 'slow');
+                        $("#content").css("background-color", "rgba(235, 235, 235, 0.3)");
+                        $("#content").css("box-shadow", "0px 1px 3px 0px #fa872f, 0px 0px 18px 0px #fa872f")
+                        $("#showed").text("Cześć, nazywam się Bartłomiej i jestem studentem drugiego roku Inżynierii i Analizy Danych na Akademii Górniczo-Hutniczej w Krakowie. Moja pasja do cyfr i analizy skomplikowanych zbiorów danych idealnie komponuje się z moim zainteresowaniem Formułą 1, gdzie każdy szczegół ma znaczenie. Wolne chwile lubię spędzać, śledząc wyścigi i analizując strategie zespołów. Razem z moim kolegą Szymonem rozwijamy stronę internetową poświęconą tej królowej motorsportu, gdzie dzielimy się naszymi spostrzeżeniami i analizami. Kiedy nie śledzę F1 lub nie zanurzam się w danych, relaksuję się grając w szachy lub eksplorując świat fotografii ulicznej, co pozwala mi spojrzeć na świat z innej perspektywy.");
+                    }
+                    else{
+                        if( $('#showed').text() == "Hejka! Jestem Szymon, drugoroczniak na AGH, gdzie wraz z moim przyjacielem Bartłomiejem zgłębiamy tajniki Inżynierii i Analizy Danych. Naszym wspólnym projektem jest strona internetowa o Formule 1, która pochłania większość naszego \"geekowskiego\" entuzjazmu. Kiedy nie koduję ani nie analizuję wykresów prędkości na torze, moje hobby to muzyka elektroniczna i DJ'ing. Uwielbiam tworzyć playlisty, które pomagają mi się skupić podczas długich sesji programistycznych. Czasem organizuję małe imprezy dla przyjaciół, gdzie mogę podzielić się moją pasją do muzyki. Poza tym, uwielbiam rowerowe wycieczki po malowniczych zakątkach Krakowa, które są dla mnie idealnym sposobem na odstresowanie po intensywnym tygodniu na uniwersytecie." ){
+                            $('html, body').animate({
+                                scrollTop: $("#showed").offset().top
+                            }, 'slow');
+                            $("#content").css("background-color", "rgba(235, 235, 235, 0.3)");
+                            $("#content").css("box-shadow", "0px 1px 3px 0px #fa872f, 0px 0px 18px 0px #fa872f")
+                            $("#showed").text("Cześć, nazywam się Bartłomiej i jestem studentem drugiego roku Inżynierii i Analizy Danych na Akademii Górniczo-Hutniczej w Krakowie. Moja pasja do cyfr i analizy skomplikowanych zbiorów danych idealnie komponuje się z moim zainteresowaniem Formułą 1, gdzie każdy szczegół ma znaczenie. Wolne chwile lubię spędzać, śledząc wyścigi i analizując strategie zespołów. Razem z moim kolegą Szymonem rozwijamy stronę internetową poświęconą tej królowej motorsportu, gdzie dzielimy się naszymi spostrzeżeniami i analizami. Kiedy nie śledzę F1 lub nie zanurzam się w danych, relaksuję się grając w szachy lub eksplorując świat fotografii ulicznej, co pozwala mi spojrzeć na świat z innej perspektywy.");
+                        }
+                        else{
+                            $("#content").css("background-color", "transparent");
+                            $("#content").css("box-shadow", "none");
+                            $("#showed").text("");
+                        }
+                    }
+                });
+            });
+        </script>
+
+<footer>
+    <div class="fot1">
+        <a href="Kontakt.html">Kontakt</a>
+        <a href="Polityka.html">Polityka Prywatności</a>
+        <a href="Dotacje.html">Dotacje</a>
+        <a href="Zasady.html">Zasady i regulacje</a>
+        <a href="Info.html">Informacje prawne</a>
+    </div>
+    <p>&copy Unoffcial Formula One Website</p>
+  </footer>
+
+    </body>
+</html>

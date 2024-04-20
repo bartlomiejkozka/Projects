@@ -1,0 +1,83 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Kalendarz</title>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="/images/f_logo_icon_248908.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="css/footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/login.js"></script>
+    </head>
+    <body>
+        <header>       
+            <nav>
+                                            <!--MENU-->
+                <ul class="menu">
+                    <li><a id="home-ico" href="main.html"><img id="home-img" src="images/2418779.png" alt="f1Icon"></a></li>
+                    <li><a href="drivers.html">Kierowcy</a></li>
+                    <li><a href="Kalendarz.html">Kalendarz</a></li>
+                    <li><a href="Tory.html">Tory</a></li>
+                    
+    
+                    <li><a href="mercedes.html">Zdjęcia</a>
+                        <ul class="firstSublist">
+                            <li><a href="mercedes.html">Mercedes</a></li>
+                            <li><a href="ferrari.html">Ferrari</a></li>
+                            <li><a href="red_bull.html">Red bull</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Sala.html">Sala Chwały</a></li>
+                    <li><a href="media.html">Media i linki</a></li>
+                    <li><a href="o_nas.html">O nas</a></li>
+                    <li><div id="sign-in"><a id="login" href="#" onclick="OnClick()">Sign in</a></div></li>
+                </ul>    
+                
+                <p id="login_text"></p>
+    
+            </nav>
+            </header>
+            <section class="calend">
+                <h3>Kalendarz wyścigów F1 na rok 2024</h3>
+                <button class="prev-button" onclick="prevSlide('cal')">Previous</button>
+                <button class="next-button" onclick="nextSlide('cal')">Next</button>
+                <img id="image" src="images/foto/January.png" title="Brak wyścigów">
+
+                <br>
+            </section>
+            <script>
+                var currentSlide = 0;
+                var images = ["images/foto/January.png", "images/foto/February.png", "images/foto/March.png", "images/foto/April.png", "images/foto/May.png", "images/foto/June.png", "images/foto/July.png", "images/foto/August.png",
+                "images/foto/September.png", "images/foto/October.png", "images/foto/November.png", "images/foto/December.png"];
+                var comments = ["Brak wyścigów", "Brak wyścigów", "2 marca - Bahrajn, 9 marca - Arabia Saudyjska, 24 marca - Australia", "7 kwietnia - Japonia, 21 kwietnia - Chiny", "5 maja - USA, 19 maja - Włochy, 26 maja - Monaco", "9 czerwca - Kanada, 23 czerwca - Hiszpania, 30 czerwca - Austria", "7 lipca - Wielka Brytania, 21 lipca - Węgry, 28 lipca - Belgia", "25 sierpnia - Holandia", "1 września - Włochy, 15 września - Azerbejdżan, 22 września - Singapur", "20 października - USA, 27 października - Meksyk", "3 listopada - Brazylia, 23 listopada - USA", "1 grudnia - Katar, 8 grudnia - Arabia Saudyjska"];
+
+                function nextSlide(elementId) {
+                    currentSlide++;
+                    if (currentSlide >= images.length) {
+                        currentSlide = 0;
+                    }
+                    document.getElementById("image").src = images[currentSlide];
+                    document.getElementById("image").title = comments[currentSlide];
+                }
+
+                function prevSlide(elementId) {
+                    currentSlide--;
+                    if (currentSlide < 0) {
+                        currentSlide = images.length - 1;
+                    }
+                    document.getElementById("image").src = images[currentSlide];
+                    document.getElementById("image").title = comments[currentSlide];
+                }
+            </script>
+            <footer>
+                <div class="fot1">
+                    <a href="Kontakt.html">Kontakt</a>
+                    <a href="Polityka.html">Polityka Prywatności</a>
+                    <a href="Dotacje.html">Dotacje</a>
+                    <a href="Zasady.html">Zasady i regulacje</a>
+                    <a href="Info.html">Informacje prawne</a>
+                </div>
+                <p>&copy Unoffcial Formula One Website</p>
+            </footer>
+    </body>
+</html>

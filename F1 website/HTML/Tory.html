@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tory</title>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="/images/f_logo_icon_248908.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="css/footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/login.js"></script>
+    </head>
+    <body>
+        <header>       
+            <nav>
+                                            <!--MENU-->
+                <ul class="menu">
+                    <li><a id="home-ico" href="main.html"><img id="home-img" src="images/2418779.png" alt="f1Icon"></a></li>
+                    <li><a href="drivers.html">Kierowcy</a></li>
+                    <li><a href="Kalendarz.html">Kalendarz</a></li>
+                    <li><a href="Tory.html">Tory</a></li>
+                    
+    
+                    <li><a href="mercedes.html">Zdjęcia</a>
+                        <ul class="firstSublist">
+                            <li><a href="mercedes.html">Mercedes</a></li>
+                            <li><a href="ferrari.html">Ferrari</a></li>
+                            <li><a href="red_bull.html">Red bull</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Sala.html">Sala Chwały</a></li>
+                    <li><a href="media.html">Media i linki</a></li>
+                    <li><a href="o_nas.html">O nas</a></li>
+                    <li><div id="sign-in"><a id="login" href="#" onclick="OnClick()">Sign in</a></div></li>
+                </ul>    
+                
+                <p id="login_text"></p>
+    
+            </nav>
+            </header>
+        <section class="tory">
+            <h2>Tory wyścigowe Formuły1</h2>
+            <p>Tory Formuły 1 są znane ze swojej technicznej zaawansowania i wymagających charakterystyk. 
+                Charakteryzują się wysokimi prędkościami, długimi prostymi, ostrymi zakrętami i różnorodnymi nawierzchniami. 
+                Każdy tor jest starannie zaprojektowany, mając na celu stworzenie wyjątkowego wyzwania dla kierowców i zapewnienie ekscytujących momentów podczas wyścigów. 
+                Dodatkowo, na wielu torach znajdują się unikalne cechy, takie jak ikoniczne zakręty, które stały się legendarnymi punktami referencyjnymi w historii Formuły 1.</p>
+            <h3 onclick="toggleSlideshow('monaco')">Circuit de Monaco - MONACO</h3>
+            <div id="monacoSlideshow" class="slideshow">
+                <img src="images/Foto/monaco1.png">
+                <img src="images/Foto/monaco3.png">
+                <img src="images/Foto/monaco2.png">
+                <button class="next-button" onclick="nextSlide('monaco')">Next</button>
+                <button class="prev-button" onclick="prevSlide('monaco')">Previous</button>
+                <button class="close-button" onclick="closeSlideshow('monaco')">Close</button>
+            </div>
+            <br>
+            <h3 onclick="toggleSlideshow('redbull')">Red Bull Ring - AUSTRIA</h3>
+            <div id="redbullSlideshow" class="slideshow">
+                <img src="images/Foto/bull1.png">
+                <img src="images/Foto/bull2.png">
+                <img src="images/Foto/bull3.png">
+                <button class="next-button" onclick="nextSlide('redbull')">Next</button>
+                <button class="prev-button" onclick="prevSlide('redbull')">Previous</button>
+                <button class="close-button" onclick="closeSlideshow('redbull')">Close</button>
+            </div>
+            <br>
+            <h3 onclick="toggleSlideshow('albert')">Albert Park Circuit - AUSTRALIA</h3>
+            <div id="albertSlideshow" class="slideshow">
+                <img src="images/Foto/alb1.png">
+                <img src="images/Foto/alb2.png">
+                <img src="images/Foto/alb3.png">
+                <button class="next-button" onclick="nextSlide('albert')">Next</button>
+                <button class="prev-button" onclick="prevSlide('albert')">Previous</button>
+                <button class="close-button" onclick="closeSlideshow('albert')">Close</button>
+            </div>
+            <br>
+            <h3>Suzuka International Racing Course - JAPONIA</h3>
+            <br>
+            <h3>Bahrain International Circuit - BAHRAJN</h3>
+            <br>
+            <h3>Jeddah Corniche Circuit - ARABIA SAUDYJSKA</h3>
+            <br>
+            <h3>Hungaroring - WĘGRY</h3>
+            <br>
+            <h3>Autodromo Nazionale Monza - WŁOCHY</h3>
+            <br>
+        </section>
+        <script>
+            function toggleSlideshow(slideshowId) {
+                var slideshowElement = document.getElementById(slideshowId + 'Slideshow');
+                var images = slideshowElement.getElementsByTagName('img');
+                var textElement = slideshowElement.previousElementSibling;
+                var closeBtn = slideshowElement.getElementsByClassName('close-button')[0];
+                var prevBtn = slideshowElement.getElementsByClassName('prev-button')[0];
+                var nextBtn = slideshowElement.getElementsByClassName('next-button')[0];
+                // Hide text and show slideshow
+                textElement.style.display = 'none';
+                slideshowElement.style.display = 'block';
+                // Show first image
+                images[0].style.display = 'block';
+                // Show buttons
+                closeBtn.style.display = 'block';
+                prevBtn.style.display = 'block';
+                nextBtn.style.display = 'block';
+            }
+            function closeSlideshow(slideshowId) {
+                var slideshowElement = document.getElementById(slideshowId + 'Slideshow');
+                var images = slideshowElement.getElementsByTagName('img');
+                var textElement = slideshowElement.previousElementSibling;
+                var closeBtn = slideshowElement.getElementsByClassName('close-button')[0];
+                var prevBtn = slideshowElement.getElementsByClassName('prev-button')[0];
+                var nextBtn = slideshowElement.getElementsByClassName('next-button')[0];
+                // Hide slideshow and show text
+                slideshowElement.style.display = 'none';
+                textElement.style.display = 'block';
+                // Hide images and buttons
+                for (var i = 0; i < images.length; i++) {
+                    images[i].style.display = 'none';
+                }
+                closeBtn.style.display = 'none';
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            }
+            function prevSlide(slideshowId) {
+                var slideshowElement = document.getElementById(slideshowId + 'Slideshow');
+                var images = slideshowElement.getElementsByTagName('img');
+                var currentIndex = 0;
+                // Find current image index
+                for (var i = 0; i < images.length; i++) {
+                    if (images[i].style.display === 'block') {
+                        currentIndex = i;
+                        break;
+                    }
+                }
+                // Hide current image
+                images[currentIndex].style.display = 'none';
+                // Calculate previous image index
+                var prevIndex = (currentIndex - 1 + images.length) % images.length;
+                // Show previous image
+                images[prevIndex].style.display = 'block';
+            }
+            function nextSlide(slideshowId) {
+                var slideshowElement = document.getElementById(slideshowId + 'Slideshow');
+                var images = slideshowElement.getElementsByTagName('img');
+                var currentIndex = 0;
+                // Find current image index
+                for (var i = 0; i < images.length; i++) {
+                    if (images[i].style.display === 'block') {
+                        currentIndex = i;
+                        break;
+                    }
+                }
+                // Hide current image
+                images[currentIndex].style.display = 'none';
+                // Calculate next image index
+                var nextIndex = (currentIndex + 1) % images.length;
+                // Show next image
+                images[nextIndex].style.display = 'block';
+            }
+        </script>
+        <footer>
+            <div class="fot1">
+                <a href="Kontakt.html">Kontakt</a>
+                <a href="Polityka.html">Polityka Prywatności</a>
+                <a href="Dotacje.html">Dotacje</a>
+                <a href="Zasady.html">Zasady i regulacje</a>
+                <a href="Info.html">Informacje prawne</a>
+            </div>
+            <p>&copy Unoffcial Formula One Website</p>
+        </footer>
+    </body>
+</html>

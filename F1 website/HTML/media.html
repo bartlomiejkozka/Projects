@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mdia</title>
+        <link rel="icon" type="image/x-icon" href="/images/f_logo_icon_248908.ico">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/login.js" defer></script>
+        <style>
+          body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+          }
+          body::before {
+            content: '';
+            position: fixed; /* Fixed zamiast absolute pozwala na pokrycie całego viewportu nawet przy scrollowaniu */
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            z-index: -1;
+            background-image: url('images/BAKU-3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(10px); /* Dodaje rozmycie do tła */
+          }
+          #div1 {
+            font-size:48px;
+          }
+          .rest {
+            display: flex;
+            justify-content: center;
+          }
+          h1 {
+            text-shadow: 2px 2px 3px white;
+            font-size: 40px;
+            color: white;
+          }
+          .media {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 1px 3px 0px #9c9c9c, 0px 0px 18px 0px #9c9c9c;
+            width: 40%;
+            background-color: rgba(235, 235, 235, 0.3);
+          }
+          .linki a{
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+          }
+          .linki a:hover {
+            color: red;
+            background-color: rgba(235, 235, 235, 0.3);
+          }
+          #insta {
+            padding-right: 10px;
+            height: 50px;
+            width: 50px;
+          }
+        </style>
+    </head>
+    <body>
+        <header>       
+            <nav>
+                      <!--MENU-->
+                <ul class="menu" id="menu">
+                    <li><a id="home-ico" href="main.html"><img id="home-img" src="images/2418779.png" alt="f1Icon"></a></li>
+                    <li><a href="drivers.html">Kierowcy</a></li>
+                    <li><a href="Kalendarz.html">Kalendarz</a></li>
+                    <li><a href="Tory.html">Tory</a></li>
+                    
+    
+                    <li><a href="mercedes.html">Zdjęcia</a>
+                        <ul class="firstSublist">
+                            <li><a href="mercedes.html">Mercedes</a></li>
+                            <li><a href="ferrari.html">Ferrari</a></li>
+                            <li><a href="red_bull.html">Red bull</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Sala.html">Sala Chwały</a></li>
+                    <li><a href="media.html">Media i linki</a></li>
+                    <li><a href="o_nas.html">O nas</a></li>
+                    <li><div id="sign-in"><a id="login" href="#" onclick="OnClick()">Sign in</a></div></li>
+                </ul>    
+                
+                <p id="login_text"></p>
+    
+            </nav>
+          </header>
+        <div class="rest">
+        <div class="media">
+          <h1>Warto zobaczyć <div id="div1" class="fa"></div></h1>
+          
+          <nav class="linki">
+            <a href="https://www.formula1.com/"><img id="insta" src="images/f_logo_icon_248908.ico"> Formula One Official Website</a>
+            <a href="https://www.instagram.com/f1/"><img id="insta" src="images/icons/4138124.png">Formula One Official Instagram</a>
+            <a href="https://twitter.com/F1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img id="insta" src="images/icons/free-twitter-87-432551.webp"> Formula One Official X(Twitter)</a>
+            <a href="https://www.youtube.com/@Formula1"><img id="insta" src="images/icons/1384060.png">Formula One Official YouTube Channel</a>
+          </nav>
+        </div>
+        </div>
+
+        <script>
+          function brakechain() {
+            var a;
+            a = document.getElementById("div1");
+            a.innerHTML = "&#xf0c1;";
+            setTimeout(function () {
+                a.innerHTML = "&#xf127;";
+              }, 1000);
+          }
+          brakechain();
+          setInterval(brakechain, 2000);
+        </script>
+
+<footer>
+  <div class="fot1">
+      <a href="Kontakt.html">Kontakt</a>
+      <a href="Polityka.html">Polityka Prywatności</a>
+      <a href="Dotacje.html">Dotacje</a>
+      <a href="Zasady.html">Zasady i regulacje</a>
+      <a href="Info.html">Informacje prawne</a>
+  </div>
+  <p>&copy Unoffcial Formula One Website</p>
+</footer>
+
+    </body>
+</html>
