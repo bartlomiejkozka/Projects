@@ -1,0 +1,297 @@
+/*=================MENU===================*/
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(235, 235, 235, 0.0);
+  margin-top: 0px;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+
+.menu li {
+  margin: 0px 5px 0 0;
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  line-height: 100px;
+  padding: 0 10px;
+}
+.menu .firstSublist li a {
+  line-height: 60px;
+}
+
+nav a:hover {
+  color: red;
+  background-color: rgba(235, 235, 235, 0.0);
+}
+
+.menu ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  padding: 0;
+  z-index: 1001;
+}
+
+.firstSublist {
+  left: 44.5%;
+}
+
+.menu ul li {
+  display: list-item;
+  width: 120px;
+  padding: 0px;
+}
+
+.menu ul li a {
+  color: black;
+}
+
+.menu ul li a:hover {
+  color: red;
+}
+
+.menu li:hover > ul {
+  display: block;
+  background-color: rgba(235, 235, 235, 0.8);
+  border-radius: 20px;
+}   
+body::before {
+  content: '';
+  position: fixed; /* Fixed zamiast absolute pozwala na pokrycie całego viewportu nawet przy scrollowaniu */
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: -1;
+  background-image: url('../images/foto/BAKU-3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px); /* Dodaje rozmycie do tła */
+}
+/*=================LOGO AND LOGIN===================*/
+nav #home-ico {   /* home icon */
+  position: absolute;
+  left: 30px;
+  top: 0px;
+}
+
+#home-img {
+  height: 100px;
+  width: 100px;
+}
+
+#sign-in { 
+  position: absolute;
+  right: 30px;
+  top: 29px;
+  height: 40px;
+  background-color: red;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#sign-in a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#sign-in:hover {
+  background-color:#660505;
+}
+#sign-in a:hover {
+  color: white;
+}
+
+#login_text {
+  color: black;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  border-radius: 5px;
+  padding: 5px;
+}
+    
+    /*=================FOOTER===================*/
+footer{
+    position: bottom;
+    bottom: 0;
+    margin-left: 250px;
+    margin-right: 250px;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    padding: 30px;
+    color: black;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.fot1{
+    background-color: rgba(235, 235, 235, 0.5);
+    border-radius: 10px;    
+    line-height: 50px;
+}
+footer p{
+    color: white;
+    font-size: 13px;
+}
+
+/*====================SEKCJA===================*/
+section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(235, 235, 235, 0.658);
+  border-radius: 10px;
+  line-height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #333;
+}
+
+section p {
+  line-height: 1.6;
+  color: #555;
+}
+/*Dotacje*/
+.dotacje-section {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.dotacje-section h3 {
+  color: #000000;
+}
+
+.dotacje-section p {
+  color: black;
+}
+/*Kontakt*/
+section p{
+  color: black;
+}
+/*Tory*/
+.tory h3 {
+  text-align: center;
+  color: #333;
+}
+.tory h2 {
+  text-align: center;
+  font-size: 40px;
+}
+.tory p {
+font-size: 20px;
+}
+.tory img {
+  width: 1000px;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tory img {
+  display: none;
+}
+.slideshow {
+  display: none;
+}
+.tory .close-button, .tory .prev-button, .tory .next-button {
+  margin-top: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  border: none;
+  background-color: red;
+  color: white;
+  float: left;
+}
+
+.calend img {
+  width: 861px;
+  height: 770px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.calend h3 {
+  font-size: 40px;
+  text-align: center;
+  color: #333;
+}
+.calend .next-button, .calend .prev-button {
+  border: none;
+  background-color: red;
+  color: white;
+  float: left;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 20px;
+  z-index: 9999;
+
+}
+.calend .next-button {
+  margin-left: 1030px;
+}
+#salabox {
+  width: 1200px;
+  height: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: none;
+  border-radius: 10px;
+  line-height: 50px;
+  box-shadow: none;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+}
+.image {
+  position: center;
+  top: 0;
+  left: 0;
+  width: 70;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 3px 2px 20px rgba(168, 20, 20, 0.5); /* Add box shadow for glow effect */
+
+}
+.left {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.right {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

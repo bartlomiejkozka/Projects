@@ -1,0 +1,174 @@
+/*=================MENU===================*/
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(235, 235, 235, 0.0);
+    margin-top: 0px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 0px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .menu {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .menu li {
+    margin: 0px 5px 0 0;
+    display: inline-block;
+  }
+  
+  nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    line-height: 100px;
+    padding: 0 10px;
+  }
+  .menu .firstSublist li a {
+    line-height: 60px;
+}
+  
+  nav a:hover {
+    color: red;
+    background-color: rgba(235, 235, 235, 0.0);
+  }
+  
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 0;
+    z-index: 101;
+  }
+  @media only screen and (max-width: 1700px) {
+    .firstSublist {
+      left: 44.5%;
+    }
+  }
+  @media only screen and (max-width: 1500px) {
+    .firstSublist {
+      left: 40.5%;
+    }
+  }
+  @media only screen and (max-width: 1300px) {
+    .firstSublist {
+      left: 38.5%;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .firstSublist {
+      left: 35.5%;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .firstSublist {
+      left: 31.5%;
+    }
+  }
+  .firstSublist {
+    left: 44%;
+  }
+  
+  .menu ul li {
+    display: list-item;
+    width: 120px;
+    padding: 0px;
+  }
+  
+  .menu ul li a {
+    color: black;
+  }
+  
+  .menu ul li a:hover {
+    color: red;
+  }
+  
+  .menu li:hover > ul {
+    display: block;
+    background-color: rgba(235, 235, 235, 0.8);
+    border-radius: 20px;
+  }   
+  
+  /*=================LOGO AND LOGIN===================*/
+  nav #home-ico {   /* home icon */
+    position: absolute;
+    left: 30px;
+    top: 0px;
+  }
+  
+  #home-img {
+    height: 100px;
+    width: 100px;
+  }
+  
+  #sign-in { 
+    position: absolute;
+    right: 30px;
+    top: 29px;
+    height: 40px;
+    background-color: red;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  #sign-in a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  #sign-in:hover {
+    background-color:#660505;
+  }
+  #sign-in a:hover {
+    color: white;
+  }
+  
+  #login_text {
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+/*=================FOOTER===================*/
+footer{
+  margin-top: 50px;
+  position: bottom;
+  bottom: 0px;
+  margin-left: 250px;
+  margin-right: 250px;
+  text-align: center;
+}
+footer a{
+  text-decoration: none;
+  padding: 30px;
+  color: black;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+.fot1{
+  background-color: rgba(235, 235, 235, 0.5);
+  border-radius: 10px;    
+  line-height: 50px;
+}
+footer p{
+  color: white;
+  font-size: 13px;
+}
+  
